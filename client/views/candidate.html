@@ -1,0 +1,66 @@
+<section>
+   <a ui-sref="allCandidates" class="btn btn-success back">Back</a>
+   <h3>{{candidate.username}} {{candidate.name}}</h3>
+    <h4>Skills</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Years</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="skill in candidate.candidateSkillLevels">
+                <td>{{skill.skill.name}}</td>
+                <td>{{skill.skill.type}}</td>
+                <td>{{skill.years}}</td>     
+                <td>{{skill.level}}</td>             
+            </tr>
+        </tbody>
+    </table>
+    
+    <h4>Education</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Speciality</th>
+                <th>Start date</th>
+                <th>Finish date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="education in candidate.educations">
+                <td>{{education.place}}</td>
+                <td>{{education.speciality}}</td>
+                <td>{{education.dateStart | date:"dd/MM/yyyy"}}</td>     
+                <td>{{education.dateFinish | date:"dd/MM/yyyy"}}</td>             
+            </tr>
+        </tbody>
+    </table>
+    <h4>Employment</h4>
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Position</th>
+                <th>Responsibility</th>
+                <th>Skills</th>
+                <th>Start date</th>
+                <th>Finish date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="employment in candidate.employments">
+                <td>{{employment.company}}</td>
+                <td>{{employment.position}}</td>
+                <td>{{employment.responsibility}}</td>    
+                <td><span class="empl-skill" ng-repeat="skill in employment.employmentSkills">{{skill.skill.name}}</span></td>     
+                <td>{{employment.dateStart | date:"dd/MM/yyyy"}}</td>     
+                <td>{{employment.dateFinish | date:"dd/MM/yyyy"}}</td>             
+            </tr>
+        </tbody>
+    </table>
+</section>

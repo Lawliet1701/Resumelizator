@@ -1,0 +1,22 @@
+{
+  "name": "resumelizator",
+  "description": "resumelizator",
+  "main": "server/server.js",
+  "authors": [],
+  "license": "UNLICENSED",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7"
+  }
+}

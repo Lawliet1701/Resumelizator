@@ -1,0 +1,87 @@
+body{
+    background-color: #efefef;
+    background-image: url('../img/main-bg.png');
+    background-repeat: repeat;
+    cursor: default;
+}
+
+header{
+    background-color: #63b763;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h4 {
+    margin-bottom: .8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font: 1.2em "Franklin Gothic Medium", Arial;
+    display: inline-block;
+    margin-bottom: .5em;
+    border-bottom: 1px dotted gray;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+table {
+    background-color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+table th {
+  background-color: #63b763;
+  color: #fff;
+  text-align: center;
+}
+
+table tbody tr:hover {
+  background-color: #ddd;
+  cursor: pointer; 
+}
+
+.back{
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 1.2em;
+    left: 1em;
+    border: 1px solid #fff;
+}
+
+.main-row{
+    text-align: center;
+    margin-bottom: .5em;    
+}
+
+.main-row a{
+    width: 200px;
+}
+
+.empl-skill:after
+{
+  content: ', ';
+}
+.empl-skill:last-child:after
+{
+  content: '';
+}

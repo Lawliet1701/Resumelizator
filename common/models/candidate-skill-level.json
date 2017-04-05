@@ -1,0 +1,39 @@
+{
+  "name": "CandidateSkillLevel",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "years": {
+      "type": "number",
+      "required": true
+    },
+    "level": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "candidate": {
+      "type": "belongsTo",
+      "model": "Candidate",
+      "foreignKey": "candidateId"
+    },
+    "skill": {
+      "type": "belongsTo",
+      "model": "Skill",
+      "foreignKey": "skillId"
+    }
+  },
+  "acls": [{
+          "accessType": "*",
+          "permission": "ALLOW",
+          "principalType": "ROLE",
+          "principalId": "$everyone"
+      }],
+  "methods": {}
+}

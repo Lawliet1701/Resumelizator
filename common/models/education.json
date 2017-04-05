@@ -1,0 +1,41 @@
+{
+  "name": "Education",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateStart": {
+      "type": "date",
+      "required": true
+    },
+    "dateFinish": {
+      "type": "date"
+    },
+    "place": {
+      "type": "string",
+      "required": true
+    },
+    "speciality": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "candidate": {
+      "type": "belongsTo",
+      "model": "Candidate",
+      "foreignKey": "candidateId"
+    }
+  },
+  "acls": [{
+          "accessType": "*",
+          "permission": "ALLOW",
+          "principalType": "ROLE",
+          "principalId": "$everyone"
+      }],
+  "methods": {}
+}

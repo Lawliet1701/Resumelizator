@@ -1,0 +1,50 @@
+{
+  "name": "Employment",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateStart": {
+      "type": "date",
+      "required": true
+    },
+    "dateFinish": {
+      "type": "date"
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "responsibility": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "candidate": {
+      "type": "belongsTo",
+      "model": "Candidate",
+      "foreignKey": "candidateId"
+    },
+    "employmentSkills": {
+      "type": "hasMany",
+      "model": "EmploymentSkill",
+      "foreignKey": "employmentId"
+    }
+  },
+  "acls": [{
+          "accessType": "*",
+          "permission": "ALLOW",
+          "principalType": "ROLE",
+          "principalId": "$everyone"
+      }],
+  "methods": {}
+}

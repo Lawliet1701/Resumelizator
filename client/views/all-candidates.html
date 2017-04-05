@@ -1,0 +1,6 @@
+<section>
+    <h3>Candidates</h3>
+    <div class="main-row" ng-repeat="candidate in candidates">
+        <a class="btn btn-default btn-detail" ui-sref="candidate({ id: candidate.id })">{{candidate.username}} {{candidate.name}}</a>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+{
+  "db": {
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "memory"
+  },
+  "mysqlDS": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "resumelizatordb",
+    "password": "1111",
+    "name": "mysqlDS",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
